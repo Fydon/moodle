@@ -27,7 +27,6 @@ use enrol_lti\local\ltiadvantage\lib\launch_cache_session;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 final class observer_test extends \advanced_testcase {
-
     /**
      * A new LTI enrolment creates the context group and adds the user to it.
      *

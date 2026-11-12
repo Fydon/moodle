@@ -27,7 +27,6 @@ use enrol_lti\local\ltiadvantage\lib\launch_cache_session;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class observer {
-
     /**
      * Add an LTI enrollee to a group named after the context label in the launch.
      *

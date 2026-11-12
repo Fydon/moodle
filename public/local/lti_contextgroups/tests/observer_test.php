@@ -30,6 +30,8 @@ final class observer_test extends \advanced_testcase {
 
     /**
      * A new LTI enrolment creates the context group and adds the user to it.
+     *
+     * @covers \local_lti_contextgroups\observer::user_enrolment_created
      */
     public function test_user_enrolment_created_adds_user_to_context_group(): void {
         global $DB;
@@ -94,6 +96,8 @@ final class observer_test extends \advanced_testcase {
 
     /**
      * A launch without a context label does not create a group.
+     *
+     * @covers \local_lti_contextgroups\observer::user_enrolment_created
      */
     public function test_user_enrolment_created_without_context_label_does_nothing(): void {
         global $DB;

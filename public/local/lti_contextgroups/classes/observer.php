@@ -103,7 +103,7 @@ class observer {
                       JOIN {enrol_lti_tools} t ON t.id = lu.toolid
                       JOIN {enrol} e ON e.id = t.enrolid
                      WHERE lu.userid = :userid
-                       AND lu.sourceid = :sourceid
+                       AND " . $DB->sql_compare_text('lu.sourceid', 36) . " = :sourceid
                        AND t.uuid = :resourceuuid
                        AND e.courseid = :courseid
                        AND e.enrol = :enrol";

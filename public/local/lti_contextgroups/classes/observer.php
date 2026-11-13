@@ -98,15 +98,15 @@ class observer {
                 continue;
             }
 
-            $sql = "SELECT lu.id
+            $sql = 'SELECT lu.id
                       FROM {enrol_lti_users} lu
                       JOIN {enrol_lti_tools} t ON t.id = lu.toolid
                       JOIN {enrol} e ON e.id = t.enrolid
                      WHERE lu.userid = :userid
-                       AND " . $DB->sql_compare_text('lu.sourceid', 36) . " = :sourceid
+                       AND ' . $DB->sql_compare_text('lu.sourceid', 36) . ' = :sourceid
                        AND t.uuid = :resourceuuid
                        AND e.courseid = :courseid
-                       AND e.enrol = :enrol";
+                       AND e.enrol = :enrol';
             $params = [
                 'userid' => $userid,
                 'sourceid' => $subject,

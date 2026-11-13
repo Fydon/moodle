@@ -115,7 +115,7 @@ class observer {
                 'enrol' => 'lti',
             ];
             if ($DB->record_exists_sql($sql, $params)) {
-                return core_text::substr($label, 0, 100);
+                return \core_text::substr($label, 0, 100);
             }
         }
 
